@@ -3,7 +3,7 @@ layout: none
 ---
 
 [{% for repository in site.github.public_repositories %}
- {% if repository.isfork == false %}
+ {% if repository.fork == false %}
  {
     "name": "{{ repository.name }}",
     "url": "{{ repository.html_url }}"
