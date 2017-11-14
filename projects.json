@@ -3,9 +3,12 @@ layout: none
 ---
 
 [{% for repository in site.github.public_repositories %}
+ {% if repository.fork %}
+   {% continue %}
+ {% endif %}
  {
     "name": "{{ repository.name }}",
     "url": "{{ repository.html_url }}",
-    "form": '{{ repository.fork }}"
+    "fork": '{{ repository.fork }}"
   }{% if forloop.last == false %},{% endif %}
 {% endfor %}]
