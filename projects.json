@@ -5,7 +5,7 @@ layout: none
 [{% for repository in site.github.public_repositories %}
  {
     "name": "{{ repository.name }}",
-    "url": "{{ repository.html_url }}"
+    "url": "{{ repository.html_url }}",
     "fork": "{{ repository.fork }}"
   }{% if forloop.last == false %},{% endif %}
 {% endfor %}]
