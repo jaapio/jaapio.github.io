@@ -38,6 +38,6 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ### My repos
 
-{% for repository in site.github.public_repositories %}
+{% for repository in site.github.owner_public_repositories %}
   * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
