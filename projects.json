@@ -3,8 +3,10 @@ layout: none
 ---
 
 [{% for repository in site.github.public_repositories %}
+ {% if repository.isfork == false %}
  {
     "name": "{{ repository.name }}",
     "url": "{{ repository.html_url }}"
   }{% if forloop.last == false %},{% endif %}
+ {% endif %}
 {% endfor %}]
